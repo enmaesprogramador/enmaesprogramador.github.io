@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&family=Roboto+Mono:ital@1&display=swap');
+:root {
+    --penguin-face: white;
+    --penguin-picorna: orange;
+    --penguin-skin: gray;
+  }
+  
+  #navbar {
+    background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el navbar esté encima del resto del contenido */
+  }
+
+
+  #navbar ul{
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+  }
+
+  #about-section
+  {
+    padding: 50px;
+  }
+
+  *{
+    font-family: 'Poppins', sans-serif;
+    
+    
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));    
+            
+  }
+
+.contact-links
+{
+  
+  
+  color: #233554;
+  font-size: 80px;
+}
+
+.navigation-bar
+{
+    display: flex;
+    
+}
+
+.projects{
+  background-color: rgba(255, 255, 255, 0.35); /* Color de fondo con 80% de opacidad para que el efecto sea visible */
+  border-radius: 10px; /* Añadimos esquinas redondeadas para que se vea más agradable */
+  backdrop-filter: blur(20px); /* Aplicamos un filtro de desenfoque con 8px de desenfoque */
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.contacts-section
+{
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.35); /* Color de fondo con 80% de opacidad para que el efecto sea visible */
+  border-radius: 10px; /* Añadimos esquinas redondeadas para que se vea más agradable */
+  backdrop-filter: blur(20px); /* Aplicamos un filtro de desenfoque con 8px de desenfoque */
+}
+
+.about
+{
+  background-color: rgba(255, 255, 255, 0.35); /* Color de fondo con 80% de opacidad para que el efecto sea visible */
+  border-radius: 10px; /* Añadimos esquinas redondeadas para que se vea más agradable */
+  backdrop-filter: blur(20px); /* Aplicamos un filtro de desenfoque con 8px de desenfoque */
+}
+
+.img-container {
+  overflow: auto; /* Limpiar el float */
+  display: flex;
+}
+
+.project1,
+.project2 {
+  display: inline-block;
+  width: 45%; /* Ajusta el ancho según tus necesidades */
+  margin: 10px; /* Agrega espaciado entre las imágenes */
+}
+
+.project1 img,
+.project2 img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+.project1caption,
+.project2caption {
+  text-align: center;
+}
+
+.technologies-reference
+{
+  margin: 20px;
+}
+
+.authorline
+{
+  text-align: center;
+}
+
+img
+{
+  width: 50%;
+}
+
+.contacts-section img{
+  width: 70px;
+  
+}
+
+.technologies
+{
+  margin: 20px;
+}
+
+.my-name
+{
+  text-align: start;
+  margin-left: 7%;
+  font-size: 35px;
+  display: block;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 15ch;
+  
+  animation: typing 2s steps(15), blink .5s infinite step-end alternate;
+
+  overflow: hidden;
+}
+
+
+.about-info
+{
+  margin: 20px;
+}
+
+.technologies ul
+{
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+
+a{
+    text-decoration: none;
+    color: rgb(55, 152, 219);
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+}
+
+a::before {
+  content: ""; /* Agregamos un pseudo-elemento antes del enlace */
+  position: absolute; /* Lo posicionamos absolutamente en relación al enlace */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* Fondo difuminado con 50% de opacidad */
+  opacity: 0; /* Lo hacemos transparente inicialmente */
+  transition: opacity 0.3s ease; /* Transición suave de 0.3 segundos en la opacidad */
+  z-index: -1; /* Lo ubicamos detrás del contenido del enlace */
+}
+
+a:hover{
+  translate: 0.3rem;
+}
+
+a:active::before
+{
+  opacity: 5;
+  border-radius: 10%;
+  animation-duration: 2s;
+}
+
+i{
+    margin-right: 5px;
+}
+
+hr
+{
+   
+        height: 2px;
+        background: linear-gradient(to right, #3498db, #e74c3c, #9b59b6);
+        border: none;
+        margin: 20px;
+      
+}
+
+@keyframes typing {
+  from{width: 0;}
+  
+}
+@keyframes blink {
+  50%{border-color: transparent;}
+}
+
+/* Estilos para dispositivos pequeños */
+@media (max-width: 767px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .img-container {
+    margin-top: 20px;
+  }
+  .project1,
+  .project2 {
+    margin-bottom: 20px;
+  }
+}
+
+/* Estilos para dispositivos medianos y grandes */
+@media (min-width: 768px) {
+  .projects {
+    display: flex;
+    justify-content: space-between;
+  }
+}
